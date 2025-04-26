@@ -67,7 +67,7 @@
       <!-- #region advanteges -->
       <section class="advantages-section">
         <div class="container">
-          <h2 class="visualy-hidden">Our Services</h2>
+          <h2 class="visually-hidden">Our Services</h2>
           <ul class="benefits">
             <li class="benefits-titles">
               <div class="advantages-titles-items">
@@ -478,23 +478,18 @@
           <form class="footer-subscribe-form">
             <label class="footer-subscribe-label" for="form-subscribe">
               <input
+                name="subscribe-input"
                 class="footer-subscribe-input"
-                name="subscribe_input"
                 type="email"
                 id="form-subscribe"
                 placeholder="E-mail"
               />
-              <!-- <div class="footer-form-buttom-cont"> -->
-              <button type="submit" class="submit-footer-button big-button">
-                Subscribe<svg
-                  class="footer-subscribe-svg"
-                  width="24"
-                  height="24"
-                >
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
             </label>
+            <button type="submit" class="submit-footer-button big-button">
+              Subscribe<svg class="footer-subscribe-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -521,7 +516,7 @@
                 name="user-name"
                 autofocus
               />
-              <svg class="input-icn" width="24" height="24">
+              <svg class="input-icn" width="18" height="24">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </div>
@@ -570,7 +565,7 @@
 
           <div class="checkbox-cont">
             <input
-              class="visualy-hidden checkbox-inpt"
+              class="visually-hidden checkbox-inpt"
               type="checkbox"
               name="user-privacy"
               value="true"
