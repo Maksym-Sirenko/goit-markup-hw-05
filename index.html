@@ -57,7 +57,9 @@
       <section class="main-banner">
         <div class="container">
           <h1 class="h-one-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="big-button">Order Service</button>
+          <button type="button" class="big-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- #endregion main page -->
@@ -260,7 +262,7 @@
                   <li class="team-socials">
                     <a href="facebook" class="team-socials-item">
                       <svg class="social-icons" width="16" height="16">
-                        <use href="./icons.svg#icon-facebook"></use>
+                        <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -471,9 +473,122 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe-form">
+          <label class="footer-subscribe-label" for="form-subscribe"
+            >Subscribe</label
+          >
+          <div class="footer-form-buttom-cont">
+            <input
+              class="footer-subscribe-input"
+              name="subscribe_input"
+              type="email"
+              id="form-subscribe"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="big-button submit-footer-button">
+              Subscribe<svg class="footer-subscribe-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
-
     <!-- #endregion footer -->
+
+    <!-- #region backdrop modal -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-close-btn-svg" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="modal-form-label-cont">
+            <label class="modal-form-label" for="form-usrname">Name</label>
+            <div class="input-wrap">
+              <input
+                class="input-cont"
+                type="text"
+                id="form-usrname"
+                name="user_name"
+                autofocus
+              />
+              <svg class="input-icn" width="18" height="18">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-label-comt">
+            <label class="modal-form-label" for="form-usrphone">Phone</label>
+            <div class="input-wrap">
+              <input
+                class="input-cont"
+                type="tel"
+                id="form-usrphone"
+                name="phone"
+              />
+              <svg class="input-icn" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-label-comt">
+            <label class="modal-form-label" for="form-usremail">Email</label>
+            <div class="input-wrap">
+              <input
+                class="input-cont"
+                type="email"
+                id="form-usremail"
+                name="user_email"
+              />
+              <svg class="input-icn" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="usrcomment-cont">
+            <label class="modal-form-label" for="form-usrcomment"
+              >Comment</label
+            >
+            <div class="textarea-cont">
+              <textarea
+                class="usrcomment-area"
+                id="form-usrcomment"
+                name="user_comment"
+                rows="7"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-cont">
+            <input
+              class="checkbox-inpt visualy-hidden"
+              type="checkbox"
+              name="form_privacy"
+              value="true"
+              id="form-checbox"
+            />
+            <label class="checkbox-label" for="form-checbox">
+              <span class="custom-checkbox">
+                <svg class="checkbox-svg" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use></svg></span
+              >I accept the terms and conditions of the
+              <a href="#" class="accept-link">Privacy Policy</a></label
+            >
+          </div>
+          <button type="submit" class="form-btn big-button">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- #endregion backdrop modal -->
+
+    <script src="./JS/modal.js"></script>
   </body>
 </html>
