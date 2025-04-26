@@ -522,53 +522,29 @@ input {
     background-color: #31d0aa;
 }
 
-.footer-subscribe-form {
+.footer-subscribe-cont {
     display: flex;
     flex-direction: column;
     height: 80px;
     margin-left: 80px;
 }
 
-.footer-subscribe-label {
+.footer-subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-subscribe-title {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 16px;
 }
 
-.footer-subscribe-input {
-    width: 264px;
-    height: 40px;
-    margin-right: 24px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background-color: transparent;
-    padding: 8px 212px 8px 16px;
-    color: #fff;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-}
-
-.footer-subscribe-input:placeholder-shown {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-    color: #fff;
-    padding-left: 16px;
-}
-
-.footer-subscribe-form input::placeholder {
-    color: #fff;
-}
-
-.footer-form-buttom-cont {
+.footer-subscribe-label {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -576,8 +552,39 @@ input {
     gap: 24px;
 }
 
+.footer-subscribe-input {
+    width: 264px;
+    height: 40px;
+    margin-right: 24px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+
+.footer-subscribe-input::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    padding-left: 16px;
+}
+
+.footer-subscribe-cont input::placeholder {
+    color: #ffffff;
+}
+
 .submit-footer-button {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 24px;
     width: 165px;
     height: 40px;
@@ -589,7 +596,7 @@ input {
     position: absolute;
     top: 10px;
     right: 24px;
-    fill: #fff;
+    fill: #ffffff;
 }
 /* footer */
 
@@ -718,6 +725,11 @@ input {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.usrcomment-cont {
+    margin-bottom: 16px;
 }
 
 .input-wrap {
@@ -728,16 +740,19 @@ input {
     position: absolute;
     left: 16px;
     top: 50%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-50%)
+    
 }
 
 .input-wrap input:focus,
-.textarea-cont textarea:focus {
+.usrcomment-area:focus {
     border: 1px solid #4d5ae5;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textarea-cont textarea:focus::placeholder {
+.usrcomment-area:focus::placeholder {
+    border-color: #4D5AE5;
     color: #4d5ae5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -760,14 +775,19 @@ input {
 }
 
 .custom-checkbox {
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     height: 16px;
     width: 16px;
     background-color: #404BBF;
+    display: inline-flex;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-svg {
@@ -777,12 +797,15 @@ input {
 
 .checkbox-cont {
     padding-top: 16px;
-    padding-bottom: 24px;
+    margin-bottom: 24px
 
 }
 
 .checkbox-inpt:checked + .checkbox-label .custom-checkbox {
+    background-color: #404bbf;
     background-color: transparent;
+    border: none;
+    fill: #F4F4FD;
     border: 1px solid rgba(46, 47, 66, 0.4);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -792,5 +815,10 @@ input {
 .accept-link {
     text-decoration: underline;
     color: #4D5AE5;
+}
+
+.form-btn {
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* backdrop modal */
