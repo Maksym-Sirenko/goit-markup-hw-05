@@ -559,7 +559,6 @@ input {
 .footer-subscribe-input {
     width: 264px;
     height: 40px;
-    margin-right: 24px;
     border: 1px solid #ffffff;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -803,6 +802,7 @@ input {
 
 .custom-checkbox {
     display: inline-flex;
+    margin-right: 8px;
     width: 16px;
     height: 16px;
     border-radius: 2px;
